@@ -26,6 +26,31 @@ Alternatively, you can retrieve the latest development version via git:
 
 ## Usage 
 
+<pre>
+]$ python aod-accounting.py 
+
+[.] Get accounting records from the EGI Accounting portal
+[ Request ] = https://accounting.egi.eu/vo_admin/cloud/vo.access.egi.eu/sum_elap_processors/UserDN/DATE/2015/6/2019/6/JSON
+
+[ Response ]
+[..]
+
+[+] Metric: Elapsed time * Number of Processors (hours) by User DN and Month 
+
+[ Accounting record ]
+[-] {"2018-02": 0, "2018-05": 48960.3822, "Percent": 44.37, "2017-05": 0, "2018-12": 71328.3711, "2018-07": 35711.0244, "2018-10": 35760.2244, "2018-11": 459075.7156, "2018-06": 34560.7622, "id": "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18@egi.eu", "2019-02": 64511.8978, "2019-03": 67058.0378, "2019-01": 71519.5444, "2019-06": 0, "2019-04": 5074.5222, "2019-05": 0, "2017-12": 32064.0667, "2017-11": 83360.2533, "2017-10": 74875.2114, "2016-10": 0, "2016-11": 0, "2016-12": 0, "2018-09": 34655.2556, "2018-08": 35616.3311, "2017-08": 0, "2017-09": 380.08, "2018-01": 22752.6994, "2017-01": 0, "2017-02": 0, "2017-03": 0, "2017-04": 0, "2018-04": 21311.72, "2017-06": 0.19, "2017-07": 0, "2016-04": 0, "Total": 1284353, "2018-03": 85776.2311, "2016-09": 0}
+[-] user_id = /C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18
+[-] Total Elapsed time * Number of Processors (hours) by User DN and Month = 1284353 hours
+[ WARNING ] The user DN exceeded the allocated service grant!
+
+=========================== [ Report ] ========================== 
+[-] EGI AoDs service grant for the given period: 2015/6 - 2019/6 
+[-] Max service grant (vCPU cores * days * 24h) = 140256
+[-] The following DN(s) exceeded the EGI AoDs resource usage limit:
+/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18 [1284353] 
+==================================================================
+</pre>
+
 For simple one-off requests you can use this library as a drop-in replacement for the requests library:
 
 <pre>
