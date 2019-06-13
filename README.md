@@ -45,7 +45,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 
-## Reference
+## References
 [PKCS#12 support for requests](https://github.com/m-click/requests_pkcs12)
 
 [EGI Applications on Demand (AoD) service](https://www.egi.eu/services/applications-on-demand/)
