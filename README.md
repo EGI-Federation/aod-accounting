@@ -6,7 +6,7 @@ This repository contains the REST API for extracting accounting record about the
 
 * Be manager of the `vo.access.egi.eu` VO
 * Install the `requests_pkcs12` python library
-* Basic knowledge of the `json`, `os` and the `[PKCS#12 requests_pkcs12]` python libraries are requested
+* Basic knowledge of the `json`, `os` and the `PKCS#12 requests_pkcs12` python libraries are requested
 * Python v2.7.12+
 
 ## Installation of the PKCS#12 support for requests
