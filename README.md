@@ -36,8 +36,7 @@ r = get('https://example.com/test',
          pkcs12_password='your_secret_password_here')
 </pre>
 
-## Reference
-[PKCS#12 support for requests](https://github.com/m-click/requests_pkcs12)
+
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
@@ -46,3 +45,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 
+## Reference
+[PKCS#12 support for requests](https://github.com/m-click/requests_pkcs12)
