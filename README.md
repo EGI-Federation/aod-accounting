@@ -6,7 +6,7 @@ This repository contains the exercises for the internal training on the EGI Data
 
 * Be manager of the vo.access.egi.eu VO
 * Install the requests_pkcs12 python library
-* Basic knowledge of the json, os and the [PKCS#12 requests_pkcs12 python](https://github.com/m-click/requests_pkcs12) libraries are requested
+* Basic knowledge of the json, os and the [PKCS#12 requests_pkcs12](https://github.com/m-click/requests_pkcs12) python libraries are requested
 
 ## Installation of the PKCS#12 support for requests
 
