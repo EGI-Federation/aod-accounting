@@ -1,6 +1,6 @@
 # aod-accounting
 
-This repository contains the REST API for extracting accounting record about the EGI Applications on Demand (AoD) service from the EGI Accounting portal.
+This repository contains the REST API for extracting accounting record about the `EGI Applications on Demand (AoD)` service from the `EGI Accounting portal`.
 
 ## Requirements
 
