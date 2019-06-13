@@ -33,7 +33,7 @@ VO_NAME = "vo.access.egi.eu"
 DATE_FROM = "2015/6"
 DATE_TO = "2019/6"
 
-USER_DN = "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18"
+USER_DN = "[..]Robot: [..]/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18"
 
 # This array contains the list of unique Per-User Sub-Proxy DNs.
 # For each DN it will be extracted the accounting record using 
@@ -113,8 +113,8 @@ def connect(server_url, vo_name, date_from, date_to, metric):
 	print ("[ Request ] = %s" %request)
 	
 	curl = get(request, 
-                   pkcs12_filename="%s/.globus/INFN.p12" %os.environ['HOME'], 
-                   pkcs12_password='giuseppelarocca')
+                   pkcs12_filename="%s/.globus/YOUR_CERTIFICATE.p12" %os.environ['HOME'], 
+                   pkcs12_password='YOUR_SECRET_PASSWORD')
 
 	data = curl.json()
 
