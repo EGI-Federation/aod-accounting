@@ -26,6 +26,18 @@ Alternatively, you can retrieve the latest development version via git:
 
 ## Usage 
 
+For simple one-off requests you can use this library as a drop-in replacement for the requests library:
+
+<pre>
+from requests_pkcs12 import get
+
+r = get('https://example.com/test', 
+         pkcs12_filename='clientcert.p12', 
+         pkcs12_password='your_secret_password_here')
+</pre>
+
+Get the accounting metric of the given user:
+
 <pre>
 ]$ python aod-accounting.py 
 
@@ -49,16 +61,6 @@ Alternatively, you can retrieve the latest development version via git:
 [-] The following DN(s) exceeded the EGI AoDs resource usage limit:
 /C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18 [1284353] 
 ==================================================================
-</pre>
-
-For simple one-off requests you can use this library as a drop-in replacement for the requests library:
-
-<pre>
-from requests_pkcs12 import get
-
-r = get('https://example.com/test', 
-         pkcs12_filename='clientcert.p12', 
-         pkcs12_password='your_secret_password_here')
 </pre>
 
 
