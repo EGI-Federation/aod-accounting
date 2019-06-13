@@ -79,3 +79,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 [EGI Accounting portal](https://www.accounting.egi.eu/)
 
+[Accounting Portal API](https://wiki.egi.eu/wiki/Accounting_Portal_API)
+
+
