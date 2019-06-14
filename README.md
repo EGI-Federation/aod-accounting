@@ -56,6 +56,10 @@ USER_DN = "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - R
 # one of the available metric (see below).
 DNs_list = []
 DNs_list.append(USER_DN)
+
+# Max vCPU cores allocated to each authorized user of the EGI AoDs
+GRANTED_CORES = 4
+
 [..]
 
 ]$ python aod-accounting.py 
