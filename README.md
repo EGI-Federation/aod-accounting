@@ -85,7 +85,35 @@ GRANTED_CORES = 4
 ==================================================================
 </pre>
 
+## Get the accounting records of a list of users' DNs
+
 Similarly, it is also possible to get the accounting records of multiple users' DN for a given time frame.
+
+<pre>
+# Configure the array with the list of PUSP DNs of which accounting records 
+# will be calculated from the EGI Accounting portal
+DNs_list = getDNs(SERVER_URL, VO_NAME, DATE_FROM, DATE_TO, METRIC_NAME)
+
+$ python aod-accounting.py 
+
+[.] Get list of DNs from the EGI Accounting portal
+[ Request ] = https://accounting.egi.eu/vo_admin/cloud/vo.access.egi.eu/sum_elap_processors/UserDN/DATE/2015/6/2019/6/JSON
+
+[.] Get accounting records from the EGI Accounting portal
+[ Request ] = https://accounting.egi.eu/vo_admin/cloud/vo.access.egi.eu/sum_elap_processors/UserDN/DATE/2015/6/2019/6/JSON
+
+[ Response ]
+[..]
+=========================== [ Report ] ========================== 
+[-] EGI AoDs service grant for the given period: 2015/6 - 2019/6 
+[-] Max service grant (vCPU cores * days * 24h) = 140256
+[-] The following DN(s) exceeded the EGI AoDs resource usage limit:
+/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera [1284353] 
+/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken: [1284353] 
+/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18@egi.eu [1284353] 
+/DC=EU/DC=EGI/C=GR/O=Robots/O=IASA/CN=Robot:appdb-support@iasa.gr [792308] 
+/DC=EU/DC=EGI/C=GR/O=Robots/O=IASA/CN=Robot:appdb-support@iasa.gr/CN=eToken:529a87e5ce04cd5ddd7161734d02df0e2199a11452430803e714cb1309cc3907@egi.eu [792308] 
+</pre>
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
