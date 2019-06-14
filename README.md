@@ -36,9 +36,19 @@ r = get('https://example.com/test',
          pkcs12_password='your_secret_password_here')
 </pre>
 
-Get the accounting metric of the given user:
+## Get the accounting metric of the given user's DN
 
 <pre>
+#Settings
+USER_DN = "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18"
+
+# This array contains the list of unique Per-User Sub-Proxy DNs.
+# For each DN it will be extracted the accounting record using 
+# one of the available metric (see below).
+DNs_list = []
+DNs_list.append(USER_DN)
+[..]
+
 ]$ python aod-accounting.py 
 
 [.] Get accounting records from the EGI Accounting portal
