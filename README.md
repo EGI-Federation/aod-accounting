@@ -59,7 +59,6 @@ DNs_list.append(USER_DN)
 
 # Max vCPU cores allocated to each authorized user of the EGI AoDs
 GRANTED_CORES = 4
-
 [..]
 
 ]$ python aod-accounting.py 
