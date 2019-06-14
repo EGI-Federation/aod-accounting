@@ -40,6 +40,15 @@ r = get('https://example.com/test',
 
 <pre>
 #Settings
+SERVER_URL = "https://accounting.egi.eu"
+VO_NAME = "vo.access.egi.eu"
+
+DATE_FROM = "2015/6"
+DATE_TO = "2019/6"
+
+# Elapsed time * Number of Processors (hours) by User DN and Month
+METRIC_NAME = "sum_elap_processors" 
+
 USER_DN = "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18"
 
 # This array contains the list of unique Per-User Sub-Proxy DNs.
@@ -73,7 +82,7 @@ DNs_list.append(USER_DN)
 ==================================================================
 </pre>
 
-
+Similarly, it is also possible to get the accounting records of multiple users' DN for a given time frame.
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
