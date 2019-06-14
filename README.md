@@ -36,7 +36,7 @@ r = get('https://example.com/test',
          pkcs12_password='your_secret_password_here')
 </pre>
 
-## Get the accounting metric of the given user's DN
+## Get the accounting records of a given user's DN
 
 <pre>
 #Settings
