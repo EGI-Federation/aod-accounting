@@ -57,6 +57,10 @@ USER_DN = "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - R
 DNs_list = []
 DNs_list.append(USER_DN)
 
+# This array will contain the list of Per-User Sub-Proxy DNs 
+# to be banned since they have overused the allocated service grant.
+ban_list = []
+
 # Max vCPU cores allocated to each authorized user of the EGI AoDs
 GRANTED_CORES = 4
 [..]
@@ -90,6 +94,31 @@ GRANTED_CORES = 4
 Similarly, it is also possible to get the accounting records of multiple users' DN for a given time frame.
 
 <pre>
+#Settings
+SERVER_URL = "https://accounting.egi.eu"
+VO_NAME = "vo.access.egi.eu"
+
+DATE_FROM = "2015/6"
+DATE_TO = "2019/6"
+
+# Elapsed time * Number of Processors (hours) by User DN and Month
+METRIC_NAME = "sum_elap_processors" 
+
+USER_DN = "/C=IT/O=INFN/OU=Robot/L=Catania/CN=Robot: Catania Science Gateway - Roberto Barbera/CN=eToken:025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18"
+
+# This array contains the list of unique Per-User Sub-Proxy DNs.
+# For each DN it will be extracted the accounting record using 
+# one of the available metric (see below).
+DNs_list = []
+
+# This array will contain the list of Per-User Sub-Proxy DNs 
+# to be banned since they have overused the allocated service grant.
+ban_list = []
+
+# Max vCPU cores allocated to each authorized user of the EGI AoDs
+GRANTED_CORES = 4
+[..]
+
 # Configure the array with the list of PUSP DNs of which accounting records 
 # will be calculated from the EGI Accounting portal
 DNs_list = getDNs(SERVER_URL, VO_NAME, DATE_FROM, DATE_TO, METRIC_NAME)
