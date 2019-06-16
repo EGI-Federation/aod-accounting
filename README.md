@@ -44,8 +44,8 @@ r = get('https://example.com/test',
 SERVER_URL = "https://accounting.egi.eu"
 VO_NAME = "vo.access.egi.eu"
 
-DATE_FROM = "2015/6"
-DATE_TO = "2019/6"
+DATE_FROM = "2015/6" # <== Change here
+DATE_TO = "2019/6"   # <== Change here
 
 # Elapsed time * Number of Processors (hours) by User DN and Month
 METRIC_NAME = "sum_elap_processors" 
@@ -99,8 +99,8 @@ Similarly, it is also possible to get the accounting records of multiple users' 
 SERVER_URL = "https://accounting.egi.eu"
 VO_NAME = "vo.access.egi.eu"
 
-DATE_FROM = "2015/6"
-DATE_TO = "2019/6"
+DATE_FROM = "2015/6" # <== Change here
+DATE_TO = "2019/6"   # <== Change here
 
 # Elapsed time * Number of Processors (hours) by User DN and Month
 METRIC_NAME = "sum_elap_processors" 
